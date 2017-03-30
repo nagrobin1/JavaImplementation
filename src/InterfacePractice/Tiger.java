@@ -39,5 +39,6 @@ class Test{
         // Accessing a member variable from interface
         // This requires not object since it is a static method
         System.out.println(Animal.alive);
+
     }
 }
