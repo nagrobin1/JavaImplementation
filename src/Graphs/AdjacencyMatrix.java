@@ -13,20 +13,19 @@ public class AdjacencyMatrix {
     private int numNodes;
     private int[][] matrix;
     private int[][] weights;
-    private char[] nodeNames;
+
 
     /** Creates a new instance of AdjacencyMatrix */
-    public AdjacencyMatrix(int n, char [] names) {
+    public AdjacencyMatrix(int n) {
         numNodes = n;
         matrix = new int[n][n];
         weights = new int[n][n];
-        nodeNames = names;
     }
     public AdjacencyMatrix(int n, char [] names, int [][] m, int [][] w) {
         numNodes = n;
         matrix = m;
         weights = w;
-        nodeNames = names;
+
     }
 
     // This method is used to align all values so the matrix will print in columns
@@ -88,11 +87,5 @@ public class AdjacencyMatrix {
         this.weights = weights;
     }
 
-    public char[] getNodeNames() {
-        return nodeNames;
-    }
 
-    public void setNodeNames(char[] nodeNames) {
-        this.nodeNames = nodeNames;
-    }
 }
