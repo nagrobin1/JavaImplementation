@@ -89,6 +89,7 @@ public class CollectionPractice {
         System.out.println(al);
 
 
+        LinkedList<Integer> r = new LinkedList<Integer>();
 
         ///////////////////////////////////
         // HashSet

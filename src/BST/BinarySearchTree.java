@@ -2,7 +2,6 @@ package BST;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.Queue;
 
 /**
  * Created by test on 3/25/17.
@@ -54,6 +53,24 @@ public class BinarySearchTree{
         /* return the (unchanged) node pointer */
         return root;
     }
+
+    public boolean search(int k){
+
+        return  searchInTree(k, this.root);
+    }
+    private boolean searchInTree(int k, Node ptr){
+
+        if(ptr == null){
+            return false;
+        }else if(ptr.key == k){
+            return true;
+        }else if(k > ptr.key){
+            return searchInTree(k, ptr.right);
+        }else{
+            return searchInTree(k, ptr.left);
+        }
+    }
+
 
     void findMax(){
         Node ptr = this.root;
@@ -141,24 +158,23 @@ public class BinarySearchTree{
         // If empty tree, return nothing
         if(this.root == null){
             return answer;}
-
+        // Create queue
         Node ptr = this.root;
-        Queue<Node> P = new LinkedList<>();
-
+        LinkedList<Node> P = new LinkedList<>();
+        // add the root to the queue
         P.add(ptr);
-
+        // process queue till empty
         while(P.isEmpty() == false){
-            if(P.peek() == null){
-                P.remove();
-                continue;
-            }
             answer.add(P.peek().key);
+            // Take out the parent
             Node parent = P.remove();
-            if(parent == null){
-                P.remove();
-                continue;}
+            // Add the parent's children to queue
+            if(parent.left != null) {
                 P.add(parent.left);
+            }
+            if(parent.right != null){
                 P.add(parent.right);
+            }
         }
         return answer;
     }
