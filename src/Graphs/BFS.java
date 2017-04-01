@@ -60,7 +60,7 @@ public class BFS {
         g[2][0] = 1;
         g[2][3] = 1;
         g[3][3] = 1;
-        
+
 
         // Just to display the AdjacencyMatrix
         AdjacencyMatrix G = new AdjacencyMatrix(5);
