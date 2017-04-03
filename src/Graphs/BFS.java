@@ -23,6 +23,14 @@ public class BFS {
         // while the queue is not empty
         while(frontier.isEmpty() == false) {
 
+            // if the current node has already been visited already but makes a
+            // second apperarnce in the queue just dequeue it and move to
+            // next item in queue.
+            if(visited.contains(frontier.peek())){
+                frontier.remove();
+                continue;
+            }
+
             // deque the head element of the queue
             int dequedItem = frontier.remove();
 
@@ -63,12 +71,27 @@ public class BFS {
 
 
         // Just to display the AdjacencyMatrix
-        AdjacencyMatrix G = new AdjacencyMatrix(5);
-        G.setMatrix(g);
-        System.out.println(G.printMatrix(g));
+        // AdjacencyMatrix G = new AdjacencyMatrix(5);
+        // G.setMatrix(g);
+        // System.out.println(G.printMatrix(g));
 
         // Magic
-        System.out.println(BreadthFirstSearch(g, 2));
+        // System.out.println(BreadthFirstSearch(g, 2));
+
+        int[][] conn = {  { 0, 1, 0, 1, 0, 0, 0, 0, 1 },  // 0
+                { 1, 0, 0, 0, 0, 0, 0, 1, 0 },  // 1
+                { 0, 0, 0, 1, 0, 1, 0, 1, 0 },  // 2
+                { 1, 0, 1, 0, 1, 0, 0, 0, 0 },  // 3
+                { 0, 0, 0, 1, 0, 0, 0, 0, 1 },  // 4
+                { 0, 0, 1, 0, 0, 0, 1, 0, 0 },  // 5
+                { 0, 0, 0, 0, 0, 1, 0, 0, 0 },  // 6
+                { 0, 1, 1, 0, 0, 0, 0, 0, 0 },  // 7
+                { 1, 0, 0, 0, 1, 0, 0, 0, 0 } };// 8
+
+        AdjacencyMatrix G = new AdjacencyMatrix(9);
+        G.setMatrix(conn);
+        System.out.println(G.printMatrix(conn));
+        System.out.println(BreadthFirstSearch(conn, 0));
 
     }
 

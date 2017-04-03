@@ -22,6 +22,13 @@ public class DFS {
         // while the stack is not empty
         while(frontier.isEmpty() == false) {
 
+            // if the current node has already been visited already but makes a
+            // second apperarnce in the stack just pop it and move to
+            // next item in stack.
+            if(visited.contains(frontier.peek())){
+                frontier.pop();
+                continue;
+            }
             // pop the TOP item from the stack
             int poppedItem = frontier.pop();
 
@@ -49,6 +56,7 @@ public class DFS {
 
     public static void main(String [] args){
 
+
         // default values are 0
         // meaning no connection
         int [][] g = new int[5][5];
@@ -58,15 +66,26 @@ public class DFS {
         g[2][0] = 1;
         g[2][3] = 1;
         g[3][3] = 1;
-        System.out.println(DepthFirstSearch(g, 2));
+        //System.out.println(DepthFirstSearch(g, 2));
 
         // Just to display the AdjacencyMatrix
-        AdjacencyMatrix G = new AdjacencyMatrix(5);
-        G.setMatrix(g);
-        System.out.println(G.printMatrix(g));
 
-        // Magic
-        System.out.println(DepthFirstSearch(g, 2));
+        //System.out.println(G.printMatrix(g));
+
+        int[][] conn = {  { 0, 1, 0, 1, 0, 0, 0, 0, 1 },  // 0
+                { 1, 0, 0, 0, 0, 0, 0, 1, 0 },  // 1
+                { 0, 0, 0, 1, 0, 1, 0, 1, 0 },  // 2
+                { 1, 0, 1, 0, 1, 0, 0, 0, 0 },  // 3
+                { 0, 0, 0, 1, 0, 0, 0, 0, 1 },  // 4
+                { 0, 0, 1, 0, 0, 0, 1, 0, 0 },  // 5
+                { 0, 0, 0, 0, 0, 1, 0, 0, 0 },  // 6
+                { 0, 1, 1, 0, 0, 0, 0, 0, 0 },  // 7
+                { 1, 0, 0, 0, 1, 0, 0, 0, 0 } };// 8
+
+        AdjacencyMatrix G = new AdjacencyMatrix(9);
+        G.setMatrix(conn);
+        System.out.println(G.printMatrix(conn));
+        System.out.println(DepthFirstSearch(conn, 0));
 
     }
 }
