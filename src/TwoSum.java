@@ -2,7 +2,7 @@
  * Created by test on 1/29/17.
  */
 
-import java.util.HashMap;
+import java.util.*;
 
 public class TwoSum {
 
@@ -24,10 +24,9 @@ public class TwoSum {
             locations.put(nums[i], i);
         }
 
-
-
         return result;
 
     }
+
 
 }
