@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9971c37-bddb-4e43-9080-5e31be469a8c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/InventoryManagement/PaintOrder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/InventoryManagement/RunPaintOrder.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Implementations/SubsetSum.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/PaintOrder.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GenericMethod.java" afterPath="$PROJECT_DIR$/src/GenericMethod.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlayDummy.java" afterPath="$PROJECT_DIR$/src/PlayDummy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InventoryManagement/PaintOrder.java" afterPath="$PROJECT_DIR$/src/InventoryManagement/PaintOrder.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,29 +21,29 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PaintOrder.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PaintOrder.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/InventoryManagement/PaintOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-120">
-              <caret line="39" column="24" lean-forward="false" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+            <state relative-caret-position="2265">
+              <caret line="151" column="0" lean-forward="true" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
               <folding>
                 <element signature="e#179#197#0" expanded="true" />
-                <element signature="e#5204#5205#0" expanded="true" />
-                <element signature="e#5252#5253#0" expanded="true" />
-                <element signature="e#5303#5304#0" expanded="true" />
-                <element signature="e#5353#5354#0" expanded="true" />
-                <element signature="e#5405#5406#0" expanded="true" />
+                <element signature="e#5307#5308#0" expanded="true" />
+                <element signature="e#5355#5356#0" expanded="true" />
+                <element signature="e#5406#5407#0" expanded="true" />
                 <element signature="e#5456#5457#0" expanded="true" />
+                <element signature="e#5508#5509#0" expanded="true" />
+                <element signature="e#5559#5560#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RunPaintOrder.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RunPaintOrder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/InventoryManagement/RunPaintOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="72" column="41" lean-forward="true" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="41" />
+            <state relative-caret-position="420">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4629#4638#0" expanded="true" />
@@ -137,8 +131,8 @@
         <option value="$PROJECT_DIR$/src/SubsetSum.java" />
         <option value="$PROJECT_DIR$/src/PlayDummy.java" />
         <option value="$PROJECT_DIR$/src/PaintOrder.java" />
-        <option value="$PROJECT_DIR$/src/InventoryManagement/PaintOrder.java" />
         <option value="$PROJECT_DIR$/src/InventoryManagement/RunPaintOrder.java" />
+        <option value="$PROJECT_DIR$/src/InventoryManagement/PaintOrder.java" />
       </list>
     </option>
   </component>
@@ -729,7 +723,7 @@
       <workItem from="1491064352261" duration="420000" />
       <workItem from="1491180962022" duration="2876000" />
       <workItem from="1491252391701" duration="3304000" />
-      <workItem from="1491511545266" duration="38385000" />
+      <workItem from="1491511545266" duration="39087000" />
     </task>
     <servers />
   </component>
@@ -766,7 +760,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190825000" />
+    <option name="totallyTimeSpent" value="191527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="839" extended-state="6" />
@@ -779,7 +773,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1922078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1922078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22847222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1285,29 +1279,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/InventoryManagement/PaintOrder.java">
+    <entry file="file://$PROJECT_DIR$/src/InventoryManagement/RunPaintOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
-          <caret line="39" column="24" lean-forward="false" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+        <state relative-caret-position="420">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
-            <element signature="e#179#197#0" expanded="true" />
-            <element signature="e#5204#5205#0" expanded="true" />
-            <element signature="e#5252#5253#0" expanded="true" />
-            <element signature="e#5303#5304#0" expanded="true" />
-            <element signature="e#5353#5354#0" expanded="true" />
-            <element signature="e#5405#5406#0" expanded="true" />
-            <element signature="e#5456#5457#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4629#4638#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/InventoryManagement/RunPaintOrder.java">
+    <entry file="file://$PROJECT_DIR$/src/InventoryManagement/PaintOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="72" column="41" lean-forward="true" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="41" />
+        <state relative-caret-position="2265">
+          <caret line="151" column="0" lean-forward="true" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4629#4638#0" expanded="true" />
+            <element signature="e#179#197#0" expanded="true" />
+            <element signature="e#5307#5308#0" expanded="true" />
+            <element signature="e#5355#5356#0" expanded="true" />
+            <element signature="e#5406#5407#0" expanded="true" />
+            <element signature="e#5456#5457#0" expanded="true" />
+            <element signature="e#5508#5509#0" expanded="true" />
+            <element signature="e#5559#5560#0" expanded="true" />
           </folding>
         </state>
       </provider>

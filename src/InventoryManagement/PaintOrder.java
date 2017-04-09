@@ -33,7 +33,7 @@ public class PaintOrder {
                 // the customer wants to execute a real order
             } else {
                 if (orderDoable) {
-                    ArrayList<Integer> outputOrder = fulFillOrderAndUpdateInventory(subsetSum, inventory.get(colorChoice));
+                    ArrayList<Integer> outputOrder = fulFillOrderAndUpdateInventory(subsetSum, this.inventory.get(colorChoice));
                     System.out.println("Checked out the following cans to fulfill the order of " +
                             requestedTotal + " liter(s) of " + colorChoice + " paint: " + outputOrder);
                     return orderDoable;
@@ -46,9 +46,16 @@ public class PaintOrder {
 
         return false;
     }
+    /*
+       ***************
+       *
+       *
+       *
+       *
+       * **************
+     */
 
     private boolean[][] subSetSumMatrix(int requestedTotal, String colorChoice) {
-
 
         ArrayList <Integer> colorInventory = inventory.get(colorChoice);
         // OrderPossible[i][j] indicates whether j liters of paint can be
@@ -90,7 +97,7 @@ public class PaintOrder {
 
         ArrayList<Integer> paintOrder = new ArrayList<>();
 
-        fulFillOrder(T, T.length-1, T[T.length-1].length - 1,paintOrder, paintInventory);
+        fulFillOrder(T, T.length-1, T[T.length-1].length - 1, paintOrder, paintInventory);
 
         // Update paintInventory by removing items that we need to for the order
         for(Integer item: paintOrder){
