@@ -1,6 +1,7 @@
 package InventoryManagement;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -10,26 +11,23 @@ public class RunPaintOrder {
 
     public static void main(String args[]) {
 
-        Scanner g = new Scanner(System.in);
-        Scanner r = new Scanner(System.in);
-        Scanner y = new Scanner(System.in);
-        Scanner a = new Scanner((System.in));
-        Scanner mc = new Scanner((System.in));
-        int quantity;
+        Scanner inventoryScanner = new Scanner(System.in);
+        Scanner menuScanner = new Scanner((System.in));
+        int menuChoice = 1;
+
         System.out.println("Initialize the inventory.");
 
-        System.out.println("1. Initialize the Red color inventory, use positive integers, separated by commas, no spaces. Example: 2,3,5,6");
-        ArrayList<Integer> initialRedInventory = initializeInventory(r);
+        printInitializeInventory("Red");
+        ArrayList<Integer> initialRedInventory = initializeInventory(inventoryScanner);
 
-        System.out.println("2. Initialize the Green color inventory, use positive integers, separated by commas, no spaces. Example: 2,3,5,6 ");
-        ArrayList<Integer> initialGreenInventory = initializeInventory(g);
+        printInitializeInventory("Green");
+        ArrayList<Integer> initialGreenInventory = initializeInventory(inventoryScanner);
 
-        System.out.println("3. Initialize the Yellow color inventory, use positive integers, separated by commas, no spaces. Example: 2,3,5,6");
-        ArrayList<Integer> initialYellowInventory = initializeInventory(y);
+        printInitializeInventory("Yellow");
+        ArrayList<Integer> initialYellowInventory = initializeInventory(inventoryScanner);
 
-        PaintOrder order1 = new PaintOrder(initialRedInventory, initialGreenInventory, initialYellowInventory);
+        PaintOrder order = new PaintOrder(initialRedInventory, initialGreenInventory, initialYellowInventory);
 
-        int menuChoice = 1;
 
         while(menuChoice != -1){
             System.out.println("---------------------------------------------");
@@ -42,48 +40,38 @@ public class RunPaintOrder {
             System.out.println("6. Check if Yellow Paint order is possible");
             System.out.println("7. Print Inventory");
             System.out.println("---------------------------------------------");
-            menuChoice = mc.nextInt();
+
+            try {
+                menuChoice = menuScanner.nextInt();
+            }catch(InputMismatchException e) {
+                System.out.println("Only select from 1 to 7");
+                menuScanner.next();
+                continue;
+            }
+
 
             switch (menuChoice){
                 case 1:
-                    System.out.println("---------------------------------------------");
-                    System.out.println("How many liters of Red paint?");
-                    quantity = a.nextInt();
-                    order1.orderPaint(quantity,"red", true);
+                    uiOutput(order, "red", true);
                     break;
                 case 2:
-                    System.out.println("---------------------------------------------");
-                    System.out.println("How many liters of Green paint?");
-                    quantity = a.nextInt();
-                    order1.orderPaint(quantity, "green", true);
+                    uiOutput(order, "green", true);
                     break;
                 case 3:
-                    System.out.println("---------------------------------------------");
-                    System.out.println("How many liters of Yellow paint?");
-                    quantity = a.nextInt();
-                    order1.orderPaint(quantity, "yellow", true);
+                    uiOutput(order, "yellow", true);
                     break;
                 case 4:
-                    System.out.println("---------------------------------------------");
-                    System.out.println("How many liters of Red paint you are thinking of ordering?");
-                    quantity = a.nextInt();
-                    System.out.println("Possible Order: " + order1.orderPaint(quantity, "red", false));
+                    uiOutput(order, "red", false);
                     break;
                 case 5:
-                    System.out.println("---------------------------------------------");
-                    System.out.println("How many liters of Green paint you are thinking of ordering?");
-                    quantity = a.nextInt();
-                    System.out.println("Possible Order: " + order1.orderPaint(quantity, "green", false));
+                    uiOutput(order, "green", false);
                     break;
                 case 6:
-                    System.out.println("---------------------------------------------");
-                    System.out.println("How many liters of Yellow paint you are thinking of ordering?");
-                    quantity = a.nextInt();
-                    System.out.println("Possible Order: " + order1.orderPaint(quantity, "yellow", false));
+                    uiOutput(order, "yellow", false);
                     break;
                 case 7:
                     System.out.println("---------------------------------------------");
-                    order1.printInventory();
+                    order.printInventory();
             }
 
         }
@@ -94,14 +82,32 @@ public class RunPaintOrder {
         ArrayList<Integer> initialInventory = new ArrayList<Integer>();
         String inventory = x.next();
         Scanner s = new Scanner(inventory).useDelimiter(",");
-        while (s.hasNext()) {
+        while (s.hasNextInt()) {
             int input = s.nextInt();
-            // Only accept negative numbers
+            // Only accept positive integers
             if(input > 0){
                 initialInventory.add(input);
             }
         }
-
         return initialInventory;
+    }
+
+    public static void uiOutput(PaintOrder order, String colorChoice, boolean realOrder){
+        int quantity;
+        Scanner quantityScanner = new Scanner((System.in));
+        System.out.println("---------------------------------------------");
+        System.out.println("How many liters of "+ colorChoice +" paint?");
+        try {
+            quantity = quantityScanner.nextInt();
+        }catch(InputMismatchException e) {
+            System.out.println("Please enter only positive integers.");
+            return;
+        }
+        order.orderPaint(quantity,colorChoice, realOrder);
+    }
+
+    public static void printInitializeInventory(String colorChoice){
+        System.out.println("Initialize the " + colorChoice + " color inventory, use positive integers, separated " +
+                "by commas, no spaces. Example: 2,3,5,6");
     }
 }
