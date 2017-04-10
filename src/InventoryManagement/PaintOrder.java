@@ -10,7 +10,15 @@ public class PaintOrder {
 
     private HashMap<String,ArrayList> inventory = new HashMap<String,ArrayList>();
 
-
+    /*
+     ******************************
+     *
+     * @param startingRed
+     * @param startingGreen
+     * @param startingYellow:
+     *
+     *******************************
+     */
     public PaintOrder(ArrayList <Integer> startingRed, ArrayList <Integer> startingGreen, ArrayList <Integer> startingYellow){
 
         inventory.put("red", startingRed);
@@ -19,6 +27,13 @@ public class PaintOrder {
 
     }
 
+    /**
+     *
+     * @param requestedTotal
+     * @param colorChoice
+     * @param realOrder
+     * @return
+     */
     public boolean orderPaint(int requestedTotal, String colorChoice, boolean realOrder) {
 
         if(requestedTotal > 0 && inventory.containsKey(colorChoice)) {
@@ -134,6 +149,16 @@ public class PaintOrder {
         System.out.println(sb.toString());
 
     }
+
+
+        /*
+       ***************
+       *
+       *
+       *
+       *
+       * **************
+     */
 
     // Helper functions for testing
 
